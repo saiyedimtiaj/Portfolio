@@ -1,0 +1,13 @@
+.box{
+    height: 270px;
+    background: #000;
+    transition: ease-in-out 7s;
+    background-position: top;
+}
+.box.box-1{
+    background: url('../../assets/project-page-1.png');
+    background-size: cover;
+}
+.box:hover{
+    background-position: bottom;
+}

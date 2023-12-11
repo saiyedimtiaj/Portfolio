@@ -48,6 +48,19 @@ const Navbar = () => {
       >
         Project
       </NavLink>
+      <NavLink
+      onClick={()=>setOpen(false)}
+        to="/contact"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "pending"
+            : isActive
+            ? "border-b-2 lg:border-black border-white"
+            : " pb-[2px]"
+        }
+      >
+        Contact
+      </NavLink>
     </>
   );
 
