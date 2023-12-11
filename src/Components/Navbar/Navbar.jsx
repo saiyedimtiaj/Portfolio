@@ -4,6 +4,8 @@ import linkdin from "../../assets/linkedin.svg";
 import github from "../../assets/logo-github.svg";
 import { IoMenuSharp,IoCloseSharp } from "react-icons/io5";
 import { useState } from "react";
+import {motion} from 'framer-motion'
+
 
 const Navbar = () => {
     const [open,setOpen] = useState(false)
@@ -81,9 +83,9 @@ const Navbar = () => {
           {navLinks}
         </ul>
         </div>
-        <h3 className="bg-black text-center text-white rounded-full text-[25px] font-semibold px-4 cursor-pointer py-2">
+        <motion.div className="bg-black text-center text-white rounded-full text-[25px] font-semibold px-4 cursor-pointer py-2" whileHover={{backgroundColor:["#121212", "rgba(131,58,180,1)","rgba(253,29,29,1)","rgba(252,176,69,1)","rgba(131,58,180,1)","#121212"],transition:{duration:1,repeat:Infinity}}}>
           SI
-        </h3>
+        </motion.div>
         <div className="flex-1 lg:flex hidden">
         {socileLinks}
         </div>
