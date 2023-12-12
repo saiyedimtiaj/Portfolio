@@ -8,6 +8,14 @@
     background: url('../../assets/project-page-1.png');
     background-size: cover;
 }
+.box.box-2{
+    background: url('../../assets/project-page-2.png');
+    background-size: cover;
+}
+.box.box-3{
+    background: url('../../assets/project-page-3.png');
+    background-size: cover;
+}
 .box:hover{
     background-position: bottom;
 }

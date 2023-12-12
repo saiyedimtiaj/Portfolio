@@ -1,9 +1,11 @@
 import Skills from '../../Components/Skills/Skills';
+import Transition from '../../Components/Transition/Transition';
 import about from '../../assets/about.jpg'
 
 const About = () => {
     return (
-        <div className='mb-10'>
+        <Transition>
+            <div className='mb-10'>
             <div className="flex flex-col lg:flex-row gap-10 mt-10 items-center justify-center px-5 max-w-6xl mx-auto">
                 <div className='lg:w-1/2'>
                 <img className="md:max-w-md w-full rounded-xl" src={about} alt="" />
@@ -15,6 +17,7 @@ const About = () => {
             </div>
             <Skills/>
         </div>
+        </Transition>
     );
 };
 

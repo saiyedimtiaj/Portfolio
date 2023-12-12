@@ -1,10 +1,12 @@
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
+import Transition from "../../Components/Transition/Transition";
 
 const Contact = () => {
   return (
-    <div className="max-w-6xl  mx-auto px-4 my-7">
+   <Transition>
+     <div className="max-w-6xl  mx-auto px-4 my-7">
       <div className="flex flex-col md:flex-row gap-6">
         <div className="max-w-xs">
           <h1 className="text-3xl font-semibold mb-2">Get in Touch</h1>
@@ -102,6 +104,7 @@ const Contact = () => {
         </form>
       </div>
     </div>
+   </Transition>
   );
 };
 
