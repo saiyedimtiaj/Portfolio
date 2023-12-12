@@ -1,4 +1,4 @@
-import profile from '../../assets/bohemian-man-with-his-arms-crossed.jpg'
+import profile from '../../assets/profile.jpeg'
 import './Home.css'
 import { useTypewriter,Cursor } from 'react-simple-typewriter'
 import { FaUpRightFromSquare } from "react-icons/fa6";
@@ -28,7 +28,7 @@ const Home = () => {
                        </Link>
                 </div>
                 <div className='avatar-wobble border-8 overflow-hidden border-black '>
-                    <img className='h-[300px]' src={profile} alt="" />
+                    <img className='h-[300px] bg-contain' src={profile} alt="" />
                 </div>
             </div>
         </div>
