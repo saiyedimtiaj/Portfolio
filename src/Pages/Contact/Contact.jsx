@@ -37,7 +37,7 @@ const Contact = () => {
             </span>
             <div>
               <h6 className="font-medium">Location</h6>
-              <p className="text-xs">Feni,Bangladesh</p>
+              <p className="text-xs">Chittagong,Bangladesh</p>
             </div>
           </div>
         </div>
@@ -53,7 +53,7 @@ const Contact = () => {
                 required
                 name="name"
                 placeholder="Enter Your Name"
-                className="px-3 w-full py-1.5 border-2 border-black"
+                className="px-3 w-full py-1.5 border-2 bg-[#E9E7E7] border-black"
               />
             </div>
             <div className="w-full">
@@ -66,7 +66,7 @@ const Contact = () => {
                 required
                 name="subject"
                 placeholder="Subject"
-                className="px-3 w-full py-1.5 border-2 border-black"
+                className="px-3 w-full py-1.5 border-2 bg-[#E9E7E7] border-black"
               />
             </div>
           </div>
@@ -81,7 +81,7 @@ const Contact = () => {
               name="email"
               required
               placeholder="Enter Your Email"
-              className="px-3 w-full py-1.5 border-2 border-black"
+              className="px-3 w-full py-1.5 border-2 bg-[#E9E7E7] border-black"
             />
           </div>
           <div>
@@ -93,7 +93,7 @@ const Contact = () => {
               name="message"
               rows="6"
               required
-              className="px-3 w-full py-1.5 border-2 border-black"
+              className="px-3 w-full py-1.5 border-2 bg-[#E9E7E7] border-black"
             ></textarea>
           </div>
           <input
