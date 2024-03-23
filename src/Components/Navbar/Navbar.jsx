@@ -3,7 +3,7 @@ import faceBook from "../../assets/facebook.svg";
 import linkdin from "../../assets/linkedin.svg";
 import github from "../../assets/logo-github.svg";
 import { IoMenuSharp, IoCloseSharp } from "react-icons/io5";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
@@ -94,24 +94,9 @@ const Navbar = () => {
     </div>
   );
 
-  const navbarRef = useRef(null); // Create a ref for the navbar element
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (navbarRef.current && !navbarRef.current.contains(event.target)) {
-        setOpen(false); // Close the navbar if click is outside
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
   return (
     <>
-      <div className="flex px-3 justify-around items-center py-4" ref={navbarRef}>
+      <div className="flex px-3 justify-between items-center py-4" >
         <div className="lg:flex-1 ">
           <div
             onClick={() => {
