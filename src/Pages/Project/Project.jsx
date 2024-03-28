@@ -29,8 +29,8 @@ const Project = () => {
       video: narutosMomVideo,
       image: book,
       description: `Welcome to our RMS website, offering user, manager, and admin roles. Users book rooms, managers handle room management, and admins oversee the site. With streamlined processes, we ensure a seamless experience for all users.`,
-      codeLink: "https://github.com/saiyedimtiaj/Nike-Store",
-      liveLink: "https://github.com/saiyedimtiaj/Hotel-Booking",
+      codeLink: "https://github.com/saiyedimtiaj/Hotel-Booking",
+      liveLink: "https://mern-rms.netlify.app",
     },
     {
       title: "Nike Store",
