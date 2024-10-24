@@ -27,7 +27,7 @@ const Blog = async () => {
                 <Image
                   width={500}
                   height={500}
-                  className="w-full h-48 object-cover transform transition-transform duration-300 hover:scale-110"
+                  className="w-full f h-48 object-cover transform transition-transform duration-300 hover:scale-110"
                   src={blog?.image}
                   alt={blog?.title}
                 />
