@@ -15,9 +15,12 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  @apply bg-zinc-900 text-zinc-50;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @layer utilities {
@@ -34,6 +37,55 @@ body {
 .prose h3,
 .prose h4,
 .prose h5,
-.prose h6 {
+.prose h6,
+.prose strong {
   color: #fff; /* Adjust as needed */
+}
+
+.menu-btn {
+  @apply w-10 h-10 grid place-items-center bg-zinc-50/10 rounded-xl ring-inset ring-1 backdrop-blur-2xl hover:bg-zinc-50/15 transition-[transform,shadow] active:scale-95;
+}
+
+.navbar {
+  @apply absolute top-full mt-2 right-0 min-w-40 p-2 bg-zinc-50/10 rounded-2xl ring-inset ring-1 ring-zinc-50/5 scale-90 isolate blur-sm opacity-0 invisible transition-[opacity,transform,filter] md:static md:flex md:items-center md:mt-0 md:opacity-100 md:blur-0 md:visible md:scale-100 backdrop-blur-2xl;
+}
+
+.navbar.active {
+  @apply opacity-100 scale-100 blur-0 visible;
+}
+
+.nav-link {
+  @apply grid items-center h-9 px-4 text-sm font-medium tracking-wide text-zinc-50/50 hover:text-zinc-50  transition-colors;
+}
+
+.nav-link.active {
+  @apply text-zinc-900 duration-500;
+}
+
+.navbar .active-box {
+  @apply absolute bg-zinc-50 rounded-lg top-2 left-2 right-2 h-9 -z-10 transition-[top,left] duration-500;
+}
+
+.btn {
+  @apply flex items-center gap-2 px-6 py-2 rounded-xl font-medium text-sm ring-1 ring-zinc-50/5 ring-inset transition-[background-color];
+}
+
+.btn-secondary {
+  @apply bg-zinc-50 text-zinc-900 active:bg-zinc-50/80;
+}
+
+.headline-2 {
+  @apply max-w-max;
+  background: -webkit-linear-gradient(0deg, #fafafa, #a1a1aa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.headline-3 {
+  background: -webkit-linear-gradient(0deg, #fafafa, #a1a1aa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.headline-2 {
+  @apply text-3xl md:text-4xl lg:leading-tight font-semibold;
 }

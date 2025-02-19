@@ -1,4 +1,3 @@
-import MobileNav from "./components/MobileNav.js";
 import Navbar from "./components/Navbar.js";
 import Contact from "./components/Contact";
 import Skill from "./components/Skill";
@@ -7,19 +6,20 @@ import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 import Experience from "./components/Work.js";
 import Blog from "./components/Blog.js";
+import Review from "./components/Review.js";
 
 const page = () => {
   return (
     <div>
       <div id="home">
         <Navbar />
-        <MobileNav />
         <Hero />
       </div>
       <Skill />
       <Projects />
       <Experience />
-      <Blog />
+      {/* <Blog /> */}
+      <Review />
       <Contact />
       <Footer />
     </div>

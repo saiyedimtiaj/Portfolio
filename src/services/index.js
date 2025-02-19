@@ -2,7 +2,12 @@
 export const getSkills = async () => {
   try {
     const data = await fetch(
-      "https://portfolio-dashboard-zeta.vercel.app/api/get-skill"
+      "https://portfolio-dashboard-zeta.vercel.app/api/get-skill",
+      {
+        next: {
+          revalidate: 3600,
+        },
+      }
     );
     return data.json();
   } catch (err) {
@@ -12,7 +17,12 @@ export const getSkills = async () => {
 export const getBlogs = async () => {
   try {
     const data = await fetch(
-      "https://portfolio-dashboard-zeta.vercel.app/api/get-blog"
+      "https://portfolio-dashboard-zeta.vercel.app/api/get-blog",
+      {
+        next: {
+          revalidate: 3600,
+        },
+      }
     );
     return data.json();
   } catch (err) {
@@ -22,7 +32,12 @@ export const getBlogs = async () => {
 export const getSingleBlogs = async (id) => {
   try {
     const data = await fetch(
-      `https://portfolio-dashboard-zeta.vercel.app/api/get-blog/${id}`
+      `https://portfolio-dashboard-zeta.vercel.app/api/get-blog/${id}`,
+      {
+        next: {
+          revalidate: 3600,
+        },
+      }
     );
     return data.json();
   } catch (err) {
@@ -32,7 +47,12 @@ export const getSingleBlogs = async (id) => {
 export const getAllProject = async () => {
   try {
     const data = await fetch(
-      `https://portfolio-dashboard-zeta.vercel.app/api/get-project`
+      `https://portfolio-dashboard-zeta.vercel.app/api/get-project`,
+      {
+        next: {
+          revalidate: 3600,
+        },
+      }
     );
     return data.json();
   } catch (err) {
@@ -43,7 +63,12 @@ export const getAllProject = async () => {
 export const getSingleProject = async (id) => {
   try {
     const data = await fetch(
-      `https://portfolio-dashboard-zeta.vercel.app/api/get-project/${id}`
+      `https://portfolio-dashboard-zeta.vercel.app/api/get-project/${id}`,
+      {
+        next: {
+          revalidate: 3600,
+        },
+      }
     );
     return data.json();
   } catch (err) {

@@ -4,7 +4,7 @@ import {
   FaHome,
   FaRegLightbulb,
   FaProductHunt,
-  FaBloggerB,
+  FaGraduationCap,
 } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { motion } from "framer-motion";
@@ -19,7 +19,7 @@ const MobileNav = () => {
       { icon: FaHome, id: "home" },
       { icon: FaRegLightbulb, id: "skill" },
       { icon: FaProductHunt, id: "project" },
-      { icon: FaBloggerB, id: "blog" },
+      { icon: FaGraduationCap, id: "education" },
       { icon: IoMdMail, id: "contact" },
     ],
     []

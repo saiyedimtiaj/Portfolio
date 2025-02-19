@@ -1,40 +1,52 @@
-import { getSkills } from "../../../src/services";
+import SkillCard from "./SkillCard";
 import Image from "next/image";
 
-const Skill = async () => {
-  const data = await getSkills();
+// ✅ Correctly import images
+import figma from "../../assets/images/figma.svg";
+import css3 from "../../assets/images/css3.svg";
+import javascript from "../../assets/images/javascript.svg";
+import nodejs from "../../assets/images/nodejs.svg";
+import expressjs from "../../assets/images/expressjs.svg";
+import mongodb from "../../assets/images/mongodb.svg";
+import react from "../../assets/images/react.svg";
+import tailwindcss from "../../assets/images/tailwindcss.svg";
+import typescript from "../../assets/images/file-type-typescript-official.svg";
+import redux from "../../assets/images/redux.svg";
+
+const Skill = () => {
+  const skillItem = [
+    { imgSrc: figma, label: "Figma", desc: "Design tool" },
+    { imgSrc: css3, label: "CSS", desc: "User Interface" },
+    { imgSrc: javascript, label: "JavaScript", desc: "Interaction" },
+    { imgSrc: nodejs, label: "NodeJS", desc: "Web Server" },
+    { imgSrc: expressjs, label: "ExpressJS", desc: "Node Framework" },
+    { imgSrc: mongodb, label: "MongoDB", desc: "Database" },
+    { imgSrc: react, label: "React", desc: "Framework" },
+    { imgSrc: tailwindcss, label: "Tailwind", desc: "User Interface" },
+    { imgSrc: typescript, label: "TypeScript", desc: "Typed JavaScript" },
+    { imgSrc: redux, label: "Redux", desc: "State Management" },
+  ];
+
   return (
-    <div
+    <section
       id="skill"
-      className="container mx-auto px-4 scroll-mt-[15px] md:scroll-mt-[75px] max-w-5xl mt-14"
+      className="pt-16 lg:pt-28 scroll-mt-[15px] md:scroll-mt-[60px]"
     >
-      <h1 className="text-3xl text-white md:text-5xl text-center font-bold">
-        Years of gaining my skills.
-      </h1>
-      <p className="mt-3 text-sm text-white md:text-base text-center max-w-5xl mx-auto">
-        I&apos;ve always been passionate about learning, with a deep curiosity
-        for how things work. My skills have been shaped through hands-on
-        experience, exploration, and a relentless drive to improve.
-      </p>
-      <div className="grid gap-5 grid-cols-3 md:grid-cols-5 lg:grid-cols-6 mt-10">
-        {data?.data?.map((item, index) => (
-          <div key={index} className="bg-[#191919] rounded-xl">
-            <div className="flex flex-col items-center w-full justify-center text-center space-y-1 px-4 py-4">
-              <Image
-                width={40}
-                height={40}
-                src={item?.image}
-                alt={"skill"}
-                className="w-full h-full object-cover flex items-center justify-center"
-              />
-              <p className="text-[11px] md:text-base text-center font-medium dark:text-zinc-400">
-                {item.title}
-              </p>
-            </div>
-          </div>
-        ))}
+      <div className="container mx-auto px-4">
+        <h2 className="headline-2 mx-auto text-center">
+          Essential Tools I use
+        </h2>
+        <p className="text-zinc-400 max-w-[50ch] mx-auto text-center mt-3 mb-8">
+          Discover the powerful tools and technologies I use to create
+          exceptional, high-performing websites & applications.
+        </p>
+        <div className="grid gap-3 grid-cols-3 md:grid-cols-3 lg:grid-cols-4">
+          {skillItem.map(({ imgSrc, label, desc }, key) => (
+            <SkillCard key={key} imgSrc={imgSrc} label={label} desc={desc} />
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
